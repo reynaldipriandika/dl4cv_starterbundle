@@ -1,4 +1,6 @@
+""" implement keras for cifar-10 datasets"""
 # import the necessary packages
+import argparse
 from sklearn.preprocessing import LabelBinarizer
 from sklearn.metrics import classification_report
 from keras.models import Sequential
@@ -7,7 +9,6 @@ from keras.optimizers import SGD
 from keras.datasets import cifar10
 import matplotlib.pyplot as plt
 import numpy as np
-import argparse
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
@@ -50,7 +51,7 @@ H = model.fit(trainX, trainY, validation_data=(testX, testY),
 # evaluate the network
 print("[INFO] evaluating the network....")
 predictions = model.predict(testX, batch_size=32)
-print(classification_report(testY, argmax(axis=1),
+print(classification_report(testY.argmax(axis=1),
     predictions.argmax(axis=1), target_names=labelNames))
 
 # plot the training loss and accuracy
