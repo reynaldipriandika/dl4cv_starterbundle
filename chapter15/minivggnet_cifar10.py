@@ -55,9 +55,9 @@ print(classification_report(testY.argmax(axis=1),
 # plot the training loss and accuracy
 plt.style.use("ggplot")
 plt.figure()
-plt.plot(np.arange(0, 40), H.history["train_loss"], label="train_loss")
+plt.plot(np.arange(0, 40), H.history["loss"], label="train_loss")
 plt.plot(np.arange(0, 40), H.history["val_loss"], label="val_loss")
-plt.plot(np.arange(0, 40), H.history["train_acc"], label="train_acc")
+plt.plot(np.arange(0, 40), H.history["acc"], label="train_acc")
 plt.plot(np.arange(0, 40), H.history["val_acc"], label="val_acc")
 plt.title("Training Loss and Accuracy on CIFAR-10")
 plt.xlabel("Epoch #")
