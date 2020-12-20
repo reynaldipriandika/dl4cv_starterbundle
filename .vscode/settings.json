@@ -1,3 +1,8 @@
 {
-    "python.pythonPath": "C:\\Users\\lenovo\\.conda\\envs\\pens\\python.exe"
+    "python.pythonPath": "C:\\Users\\lenovo\\.conda\\envs\\pens\\python.exe",
+    "python.analysis.extraPaths": [
+        "./chapter15"
+    ],
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
 }
