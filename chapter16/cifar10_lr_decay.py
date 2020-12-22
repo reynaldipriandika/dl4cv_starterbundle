@@ -17,7 +17,7 @@ def step_decay(epoch):
     # initialize the base initial learning rate, drop factor, and
     # epoch to drop every
     initAlpha = 0.01
-    factor = 0.25
+    factor = 0.5
     dropEvery = 5
 
     # compute learning rate for the current epoch
