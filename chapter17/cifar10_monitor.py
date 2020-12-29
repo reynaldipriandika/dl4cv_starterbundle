@@ -38,7 +38,7 @@ labelNames = ["airplane", "automobile", "bird", "cat", "deer",
 
 # initialize the SGD optimizer, but without any learning rate decay
 print("[INFO] compiling model...")
-opt = SGD(lr=0.01, momentum=0.9, nestrov=True)
+opt = SGD(lr=0.01, momentum=0.9, nesterov=True)
 model = MiniVGGNet.build(width=32, height=32, depth=3, classes=10)
 model.compile(loss="categorical_crossentropy", optimizer=opt, 
     metrics=["acc"])
