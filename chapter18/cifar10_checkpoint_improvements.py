@@ -9,7 +9,7 @@ import os
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
-ap.add_argument("w", "--weights", required=True, 
+ap.add_argument("-w", "--weights", required=True, 
     help="path to weights directory")
 args = vars(ap.parse_args())
 
